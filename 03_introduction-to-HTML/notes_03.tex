@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+	
+	\title{03 - Introduction to HTML}
+	\author{Nico Limacher}
+	
+\maketitle
+\section{Boilerplate and Comments}
+\subsection{Objectives}
+
+\begin{enumerate}
+	\itemsep0em
+	\item write simple HTML docs
+	\item difference between closing/ self closing tags
+	\item tags with attributes
+	\item using MDN as a reference
+	\item given a website, reproduce
+\end{enumerate}
+
+\subsection{General Structure of Tags}
+<tagName> some content </tagName>
+
+\subsection{Best Resources}
+\begin{itemize}
+	\itemsep0em
+	\item MDN - mozilla developer network
+	\item reading assignment - MDN intro to html
+\end{itemize}
+
+\subsection{Commenting in HTML}
+use <! - - and - ->
+
+\subsection{Boilerplate}
+\begin{verbatim}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IN HERE IS THE TEXT IN THE BROWSER TAB</title>
+  </head>
+  <body>
+  </body>
+</html>
+\end{verbatim}
+
+\section{Basic Tags}
+\subsection{Frequently Used Tags}
+\begin{center}
+	\begin{tabular}{| l | l | p{10cm} |}
+		\hline
+		\textbf{Tag} & \textbf{Block/In-line} & \textbf{Explanation} \\ \hline
+		H1 & Block & Header of Size 1 \\ \hline
+		H2 & Block & Header of Size 2 \\ \hline
+		H3 & Block & Header of Size 3 \\ \hline
+		H4 & Block & Header of Size 4 \\ \hline
+		H5 & Block & Header of Size 5 \\ \hline
+		H6 & Block & Header of Size 6 \\ \hline
+		p & Block & Creates self-contained paragraph \\ \hline
+		strong & In-line & Bolds the following text \\ \hline
+		em & In-line & Italicizes the following text \\ \hline
+	\end{tabular}
+\end{center}
+
+\subsection{Block vs. Inline}
+\begin{center}
+BLOCK - Takes its own line, always
+
+IN-LINE - Can be used within other tags without automatically newlining
+\end{center}
+
+\end{document}
