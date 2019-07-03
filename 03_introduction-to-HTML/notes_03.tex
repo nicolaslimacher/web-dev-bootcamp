@@ -8,26 +8,29 @@
 	\author{Nico Limacher}
 	
 \maketitle
-\section{Boilerplate and Comments}
-\subsection{Objectives}
 
+
+\section{Objectives}
 \begin{enumerate}
 	\itemsep0em
-	\item write simple HTML docs
-	\item difference between closing/ self closing tags
-	\item tags with attributes
-	\item using MDN as a reference
-	\item given a website, reproduce
+	\item Write simple HTML docs
+	\item Difference between closing and self-closing tags
+	\item Tags with attributes
+	\item Using MDN as a reference
+	\item Given a website, reproduce
 \end{enumerate}
 
+\section{Boilerplate and Comments}
 \subsection{General Structure of Tags}
-<tagName> some content </tagName>
+\begin{verbatim}
+<tagName> ...some content... </tagName>
+\end{verbatim}
 
 \subsection{Best Resources}
 \begin{itemize}
 	\itemsep0em
-	\item MDN - mozilla developer network
-	\item reading assignment - MDN intro to html
+	\item MDN - Mozilla Developer Network
+	\item Reading assignment - MDN intro to HTML
 \end{itemize}
 
 \subsection{Commenting in HTML}
@@ -61,14 +64,71 @@ use <! - - and - ->
 		p & Block & Creates self-contained paragraph \\ \hline
 		strong & In-line & Bolds the following text \\ \hline
 		em & In-line & Italicizes the following text \\ \hline
+		img & block? & Add an image \\ \hline
+		a & In-line & Add a link. Note: be careful to specify local or http \\ \hline
 	\end{tabular}
 \end{center}
 
 \subsection{Block vs. Inline}
-\begin{center}
-BLOCK - Takes its own line, always
+\subsubsection{Block}
+Will automatically start the element on a new line.
+\subsubsection{In-line}
+Can be used within other tags without automatically new-lining.
 
-IN-LINE - Can be used within other tags without automatically newlining
+\section{HTML lists}
+\subsection{Ordered List}
+\begin{verbatim}
+<ol>
+  <li>elementary school</li>
+  <li>middle school</li>
+  <li>high school</li>
+</ol>
+\end{verbatim}
+Becomes:
+\begin{enumerate}
+	\itemsep0em
+	\item elementary school
+	\item middle school
+	\item high school
+\end{enumerate}
+\subsection{Unordered List}
+\begin{verbatim}
+<ul>
+  <li>fish</li>
+  <li>cat</li>
+  <li>dog</li>
+</ul>
+\end{verbatim}
+Becomes:
+\begin{itemize}
+	\itemsep0em
+	\item fish
+	\item cat
+	\item dog
+\end{itemize}
+
+\section{Divs and Spans}
+A way to group elements for formatting purposes.
+\subsection{Div}
+Group multiple elements together into a box or some other graphical entity. For example, grouping a title and paragraph into a different colored box.
+\subsection{Span}
+Also a generic container but an in-line version, rather than a block level one.
+
+\section{Attributes}
+Adding additional information
+\begin{verbatim}
+The key-value pair
+<tag name="value">...</tag>
+\end{verbatim}
+
+\begin{center}
+	\begin{tabular}{| l | p{10cm} |}
+		\hline
+		\textbf{Attr.} & \textbf{Explanation} \\ \hline
+		src & name or URL link of image file \\ \hline
+		href & link for an <a> tag \\ \hline
+	\end{tabular}
 \end{center}
+
 
 \end{document}
