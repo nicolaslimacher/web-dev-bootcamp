@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+	
+	\title{Intermediate HTML}
+	\author{Nico Limacher}
+	
+\maketitle
+\section{Objectives}
+
+\begin{enumerate}
+	\itemsep0em
+	\item different elements in HTML tables.
+	\item making HTML tables.
+	\item writing valid HTML forms.
+\end{enumerate}
+
+\section{HTML Tables}
+	\subsection{Option 1:}
+	\begin{verbatim}
+	<table>
+	  <tr>
+	    <td>Red</td>
+	    <td>Orange</td>
+	  </tr>
+	  <tr>
+	    <td>Green</td>
+	    <td>Blue</td>
+	  </tr>
+	</table>
+	\end{verbatim}
+	Becomes:
+	
+	\medskip
+	\begin{tabular}{| l | l |}
+		\hline
+		Red & Orange \\ \hline
+		Green & Blue\\ \hline
+	\end{tabular}
+	\medskip
+	
+	Note: No border will be shown without CSS
+	
+	\subsubsection{Adding Header Row}
+	\begin{verbatim}
+	<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Age</th>
+	  </tr>
+	  <tr>
+	    <td>Bert</td>
+	    <td>5</td>
+	  </tr>
+	</table>
+	\end{verbatim}
+	Becomes:
+	
+	\medskip
+	\begin{tabular}{| l | l |}
+		\hline
+		\textbf{Name} & \textbf{Age} \\ \hline
+		Bert & 5 \\ \hline
+	\end{tabular}
+	\medskip
+	
+	\subsection{Option 2:}
+	To distinguish headers from normal rows: use <thead> and <tbody>
+	\begin{verbatim}
+	<table>
+	  <thead>
+	    <th>Name</th>
+	    <th>Age</th>
+	  </thead>
+	  <tbody>
+	    <td>Bert</td>
+	    <td>5</td>
+	  </tbody>
+	</table>
+	\end{verbatim}
+	
+	Looks exactly the same, but more readable
+
+\section{Introduction To Forms}
+	Getting user input
+
+	\begin{verbatim}
+	<form action="index.html" method="post">
+	  <!-- all our inputs go here -->
+	</form>
+	\end{verbatim}
+	
+	\paragraph*{action}
+	Where to send data
+	\paragraph*{method}
+	The type of HTTP request. Can be "post", "get"...
+	
+	\subsection{Inputs}
+	\begin{verbatim}
+		<input type="text">
+		<input type="date">
+		<input type="color">
+		<input type="checkbox">
+	\end{verbatim}
+
+\section{The Form Tag}
+\paragraph*{Form}
+Inputs grouped together
+
+\section{Labels}
+\section{Form Validations}
+\section{Dropdowns and Radio Buttons}
+
+\end{document}
