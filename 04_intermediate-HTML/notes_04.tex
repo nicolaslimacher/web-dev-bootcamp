@@ -110,7 +110,74 @@
 Inputs grouped together
 
 \section{Labels}
+Making our site accessible (by text-to-speech). a good practice
+
+\subsection{Two Options}
+\begin{enumerate}
+	\item Placing everything within <label> tags:
+	\begin{verbatim}
+	<label>
+	  Username:
+	  <input type="text" placeholder="username">
+	</label>
+	\end{verbatim}
+	\item For and id pairings
+	\begin{verbatim}
+	<label for="username">Username:</label>
+	<input id="username" type="text" placeholder="username">
+	\end{verbatim}
+\end{enumerate}
+
 \section{Form Validations}
-\section{Dropdowns and Radio Buttons}
+Simple validations with plain HTML
+\begin{enumerate}
+	\item "required" attribute. If present then field cannot be blank
+	\begin{verbatim}
+	<input name="username" type="text" placeholder="username" required>
+	\end{verbatim}
+	\item Format of data
+	\begin{itemize}
+		\item Change "type" attribute to take advantage of built in validation:
+		\begin{verbatim}
+		<input name="username" type="email" placeholder="email" required>
+		\end{verbatim}
+		\item Note: error messaging handled by browser, no control on our end
+	\end{itemize}
+\end{enumerate}
+\section{Drop-downs and Radio Buttons}
+\begin{enumerate}
+	\item Radio Buttons
+	
+	Another type of input tag. Cannot be toggled off once selected whereas a checkbox can
+	\begin{center}
+		Setting up connected radio buttons using Name:
+	\end{center}
+	\begin{verbatim}
+	<label for="dogs">Dogs:</label>
+	<input name="petChoice" id="dogs" type="radio" value="dog">
+	
+	<label for="cats">Cats:</label>
+	<input name="petChoice" id="cats" type="radio" value="cat">
+	\end{verbatim}
+	Note: "value" determines what is sent in the query once submitted
+	\item Select
+	
+	Creates drop-down menus
+	\begin{verbatim}
+	<select name="color">
+	  <option>Red</option>
+	  <option>Blue</option>
+	  <option>Yellow</option>
+	</select>
+	\end{verbatim}
+	\begin{itemize}
+		\item "name" determines the key of the query
+		\item either "value" attribute of option tag or the actual value of tag is passed in key-value pair of query
+	\end{itemize}
+
+	\item Text Area
+	
+	Multiple line long text areas
+\end{enumerate}
 
 \end{document}
