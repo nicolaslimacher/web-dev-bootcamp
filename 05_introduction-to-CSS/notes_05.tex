@@ -1,0 +1,167 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+	
+	\title{}
+	\author{Nico Limacher}
+	
+\maketitle
+\section{Objectives}
+
+\begin{enumerate}
+	\itemsep0em
+	\item Define the "General Rule" of CSS
+	\item Correctly including a CSS File in HTML Files
+	\item Select elements by tagnames, classes, ids
+	\item Style elements with basic properties like color and background
+	\item Using Developer tools
+\end{enumerate}
+
+\section{CSS Basics}
+	For a demo of what is possible see www.csszengarden.com
+	\paragraph*{CSS and its role in WebDev}
+	Cascading Style Sheets\\How things should look. Written separately from HTML
+	\paragraph*{The General Rule} Select something > Pick property > Apply style
+	\begin{verbatim}
+	/* Make all h1's purple and 56px font */
+	h1 {
+	  color: purple;
+	  font-size: 56px;
+	}
+	\end{verbatim}
+
+\section{Our First Stylesheet}
+	
+	\subsection{The Old (and Wrong) Way to Style}
+	Inline
+	\begin{verbatim}
+	  <li style="color: purple">Tennis</li>
+	\end{verbatim}
+	Style Tag (in the <head> section)
+	\begin{verbatim}
+	  <style type="text/css">
+	  h1 {
+	    color: purple;
+	  }
+	  </style>
+	\end{verbatim}
+
+	\subsection{The Correct Way to Style}
+	\begin{enumerate}
+		\item create your CSS file
+		\item link to it in the <head> section of your HTML file
+		\begin{verbatim}
+	    <link rel="stylesheet" href="app.css">
+		\end{verbatim}
+	\end{enumerate}
+	
+\section{CSS Colors}
+	
+	\subsection{Built in Colors}
+	There are 147 different built in colors, but not generally very useful
+	
+	\subsection{Color Systems}
+	\begin{enumerate}
+		\item Hexadecimal
+		\\"\#" + 6 Characters\\Can just use color picker to find them\\Ex: \begin{verbatim}
+		color: #00FF00;
+		\end{verbatim}
+		\item RGB
+		\\One channel for Red, Green, Blue from 0-255\\Ex: \begin{verbatim}
+		color: rgb(0,255,0);
+		\end{verbatim}
+		\item RGBA
+		\\Same as RGB but a 4th value from 0-1 for transparency\\
+		\\Ex: \begin{verbatim}
+		color: rgba(100,0,100,0.7);
+		\end{verbatim}
+	\end{enumerate}
+
+\section{Background and Border}
+Instead of "color", use "background" as the property:
+\begin{verbatim}
+h4 {
+  background: rgb(255, 100, 100);
+}
+\end{verbatim}
+
+\subsection*{Picture as a Background}
+use the "url" function
+\begin{verbatim}
+body {
+  background: url(some website..);
+}
+\end{verbatim}
+To stretch out over the full screen, use:
+\begin{verbatim}
+body {
+  background: url(some website..);
+  background-repeat: no-repeat;
+  bacground-size: cover;
+}
+\end{verbatim}
+
+\subsection*{Border}
+Parts:
+\begin{itemize}
+	\item border-color
+	\item border-width
+	\item border-style
+\end{itemize}
+Looks like:
+\begin{verbatim}
+h1 {
+  color: rgba(0, 200, 100, 0.8);
+  border-color: purple;
+  border-width: 5px;
+  border-style: solid;
+}
+\end{verbatim}
+Or simply:
+\begin{verbatim}
+h1 {
+  color: rgba(0, 200, 100, 0.8);
+  border: 8px dashed purple;
+}
+\end{verbatim}
+
+\section{Selectors Basics Todo List}
+\subsection*{CSS Selectors}
+\begin{enumerate}
+	\item Element
+	\item ID
+	\\Start CSS call with "\#"
+	\item Class
+	\\Start CSS call with "."
+\end{enumerate}
+
+\section{Intro to Browser Inspector}
+Inspect Element
+
+\section{More Advanced Selectors}
+\begin{enumerate}
+	\item Star
+	\\Start with "*" Selects everything on page
+	\item Descendant Selector
+	\\ Start with parent element and then " " and then child element
+	\\takes two or more tags and chain together
+	\\ Ex: take only anchor tags within li
+	\item Adjacent Selector
+	\\use "+" to select elements only on the same level as other elements
+	\item Attribute Selector
+	\\based on any attribute
+	\\element[attribute=whatever you want] \{
+	\item n$^{th}$ of Type
+	\\element:nth-of-type(number) \{
+	\\can also do nth-of-type(even)
+\end{enumerate}
+
+\section{Specificity and the Cascade}
+	\paragraph*{Inheritance} Styling of parent element being passed down to child elements
+	\paragraph*{Specificity} If there is conflicting style, like an <li> tag inheriting color from <body> and <ul>, the style with greater specificity will be applied. Styles that are more closely related are applied
+	\\\\Can reference specificity calculators online to check
+	
+
+\end{document}
