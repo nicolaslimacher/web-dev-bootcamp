@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+	
+	\title{}
+	\author{Nico Limacher}
+	
+\maketitle
+\section{Objectives}
+
+\begin{enumerate}
+	\itemsep0em
+	\item Manipulate Common Font and Text Properties using CSS
+	\item External Fonts
+	\item the Box Model
+\end{enumerate}
+
+\section{Texts and Fonts}
+	\subsection*{Font Properties to Adjust}
+	\begin{enumerate}
+		\itemsep0em
+		\item font-family:
+		\\references only pre-installed fonts (more on this later)
+		\item font-size:
+		\\can explicitly reference px height or use "em" for relative
+		\\*good idea: set base px height in body and em everywhere else
+		\item font-weight
+		\\boldness of font, some fonts allow for numeric values besides just "bold"
+		\item line-height
+		\\changes spacing of line (double space, etc.)
+		\item text-align
+		\\left, right, center
+		\item text-decoration
+		\\underline, strike through etc.
+	\end{enumerate}
+
+\section{Google Fonts}
+	find at fonts.google.com
+	\\pick font and font-weight you want
+	\\will be given a link to paste into the <head> tab of html
+	\\make sure to use font family in CSS sheet then
+	
+\section{Box Model}
+	layout of the tags
+	\paragraph*{Box Model} Every element has a box around it
+	\\each box has four edges:
+	\begin{enumerate}
+		\itemsep0em
+		\item margin edge:
+		\\ spacing outside of border
+		\item border edge:
+		\\
+		\item padding edge
+		\\ space between content and border
+		\\ can choose left, right, top etc.
+		\item content edge
+		\\ can use percentage to resize with window size
+	\end{enumerate}
+	\\margin and padding can take 4 values as arguments: top, right, bottom, left
+	\\margin auto will center elements
+\section{}
+\begin{itemize}
+	\itemsep0em
+	\item
+	\item
+\end{itemize}
+
+\end{document}

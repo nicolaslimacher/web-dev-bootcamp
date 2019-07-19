@@ -1,0 +1,15 @@
+h1 {
+  font-family: "Barriecito";
+  text-align: left;
+  font-weight: bold;
+}
+p {
+  font-family: "arial";
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+span {
+  font-size: 0.5em;
+  text-decoration: line-through;
+}
