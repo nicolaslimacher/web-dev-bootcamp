@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+	
+	\title{}
+	\author{Nico Limacher}
+	
+\maketitle
+
+\textit{Note:} Using Bootstrap 3.3.7 in this chapter, Bootstrap 4 will be in the next chapter
+\section{Objectives}
+
+	\begin{enumerate}
+		\itemsep0em
+		\item Explain what Bootstrap is, and more generally what a library is
+		\item Include Bootstrap in our applications locally and with a CDN
+		\item Using common Bootstrap components like navs and buttons
+		\item Build a layout using the Bootstrap grid system
+	\end{enumerate}
+
+\section{Projects}
+
+	\begin{enumerate}
+		\itemsep0em
+		\item Photo Portfolio Site
+		\\Similar to last Chapter but with Bootstrap
+		\item Create a Landing Page for a Fictional Start-Up
+		\\
+	\end{enumerate}
+
+\section{What is Bootstrap}
+
+	\paragraph*{According to Bootstrap Themselves:} Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
+	
+	\begin{itemize}
+	\itemsep0em
+	\item Bootstrap resides in a single CSS and single JavaScript file.
+	\item Has famously good documentation on the website.
+	\item A lot like LEGO website pieces to fit together.
+	\end{itemize}
+
+\section{Adding Bootstrap to a Project}
+
+	\subsection*{Adding Locally}
+	Downloaded .zip and included \textit{bootstrap.css} in our html
+	
+	\subsection*{Using CDN}
+	link an online-hosted external bootstrap file online, equivalent
+	\\\\Is this faster? To check
+
+\section{Forms and Inputs in Bootstrap}
+
+	\subsection*{Bootstrap Parts Demoed}
+	\begin{enumerate}
+		\itemsep0em
+		\item Button
+		\item Jumbotron
+		\item Container
+		\item Form
+	\end{enumerate}
+
+	\paragraph{Examples can be found in \textit{bootbasics.html}}
+	
+\section{Nav Bars}
+
+	The big title bar thing on top of websites
+
+	\paragraph{Examples can be found in \textit{navbar.html}}
+	
+	To fix to the top use "navbar-fixed-top"
+	
+\section{The Grid System}
+
+	\begin{itemize}
+		\itemsep0em
+		\item Can space 12 Units across
+		\item For example: 2 units on left for sidebar, 10 left on the right for content
+	\end{itemize}
+	
+	\subsection*{Four Sizes of Grid Units}
+	\begin{enumerate}
+	\itemsep0em
+	\item Extra Small .col-xs-
+	\item Small .col-sm-
+	\item Medium .col-md-
+	\item Large .col-lg-
+	\end{enumerate}
+
+	\paragraph*{Nesting grids} Can add another 12 units within any other division of units
+
+
+\section{Bootstrap and Mobile Devices}
+
+	\subsection*{To get bootstrap to be responsive on mobile:}
+	Include: 
+	\begin{verbatim}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	\end{verbatim}
+
+
+\end{document}
