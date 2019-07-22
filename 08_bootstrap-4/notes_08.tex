@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+	
+	\title{}
+	\author{Nico Limacher}
+	
+\maketitle
+
+\section{Important Changes From 3 to 4}
+
+	\begin{itemize}
+		\item New tool: Flexbox. To be discussed later.
+		\item Main unit used switched from px to rem.
+		\item The global font size is by default now 16.
+		\item Now includes a fifth screen-size.
+		\item New utility classes.
+		\item New JS library that needs to be included.
+	\end{itemize}
+
+\section{Setting up Bootstrap 4}
+
+	Aforementioned new library: just use a CDN to include. JS libraries \emph{need to be in order}
+	
+	\begin{enumerate}
+		\item jquery
+		\item popper - deals with dropdowns and pop-ups
+		\item base bootstrap JS files
+	\end{enumerate}
+	
+	\paragraph*{Starter Template} Like an HTML boilerplate, but includes Bootstrap as well. Just google for it
+
+\section{Colors and Backgrounds}
+
+	\paragraph*{Contextual Color Classes} Things like "Danger", "Warning". Not explicit colors but have meaning attached. Have default values that changed in 4. New classes added "Secondary", "Dark" etc.
+	
+\section{Typography}
+
+	\begin{itemize}
+		\item Page Headings
+		\\Obviously have h1,h2... still but can also use "display-1", "display-2" etc. as classes
+		\item Block Quotes
+		\\Using class="blockquote" or class="blockquote text-right"
+		\item Pixels to Rems
+		\\A.k.a. Root-ems, a relative unit to the default browser pixel size
+		\\This is good because things scale together
+	\end{itemize}
+
+\section{New Fancy Spacing Utilities}
+
+	Things like shadows, alignment, margin, padding etc.
+	
+	\begin{enumerate}
+	\item Class: border (further adjust like border-top, border-primary)
+	\\By default a thin, light gray border
+	\item Class: m, p (m- margin, p- padding)
+	\\Pick location with t- top, x- both left and right, b- bottom etc...
+	\\Then pick size with 0-5 or Auto, based on rem.
+	\end{enumerate}	
+
+\section{Responsive Breakpoints}
+
+	New Screensizes (XS, S, M, L, XL)
+	\\Can selectively pad and margin based on screen size
+	\\Like specifying for size M \emph{and above} for M
+
+\section{New Navbars}
+	
+	\begin{itemize}
+		\item Can now decide when we want the bar to expand/contract
+		\item Now have control of background color
+	\end{itemize}
+
+\section{New Display Utility}
+
+	For hidden/visible content: now have class d-{value}
+	Ex:
+	\begin{verbatim}
+	class="d-xl-none"
+	\end{verbatim}
+	will hide the object on large screens
+
+\end{document}
